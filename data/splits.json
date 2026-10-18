@@ -1,0 +1,7 @@
+{
+  "fixed_on": "2026-10-13",
+  "rule": "Split by time. Fixed before any model was trained; never moved afterwards. Half-open intervals [start, end).",
+  "train":      {"start": "2020-02-01T00:00:00", "end": "2020-04-01T00:00:00", "use": "fit the autoencoder and the healthy baseline; contains no failure"},
+  "validation": {"start": "2020-04-01T00:00:00", "end": "2020-05-15T00:00:00", "use": "choose alert thresholds; contains failure 1"},
+  "evaluation": {"start": "2020-05-15T00:00:00", "end": "2020-09-02T00:00:00", "use": "report numbers only; contains failures 2, 3, 4"}
+}

@@ -1,0 +1,341 @@
+{
+  "questions": 20,
+  "hit_at_1": 12,
+  "hit_at_3": 20,
+  "tau": 3.758,
+  "tau_errors": 1,
+  "tau_rule": "midpoint of the widest gap that minimises (in-scope refused + out-of-scope answered); ties go to the higher tau",
+  "in_scope": [
+    {
+      "q": "Reservoir pressure keeps falling when the train is parked overnight, what should I check?",
+      "expect": [
+        "M-4.1",
+        "M-6.1"
+      ],
+      "top3": [
+        "M-4.4",
+        "M-4.1",
+        "M-2.4"
+      ],
+      "top_score": 9.13,
+      "hit1": false,
+      "hit3": true
+    },
+    {
+      "q": "How do I run a leak test?",
+      "expect": [
+        "M-6.1"
+      ],
+      "top3": [
+        "M-6.1",
+        "M-4.3",
+        "M-4.1"
+      ],
+      "top_score": 4.752,
+      "hit1": true,
+      "hit3": true
+    },
+    {
+      "q": "DV_pressure does not go back to zero while the compressor is loading",
+      "expect": [
+        "M-4.2",
+        "M-6.2"
+      ],
+      "top3": [
+        "M-2.1",
+        "M-2.3",
+        "M-6.2"
+      ],
+      "top_score": 9.194,
+      "hit1": false,
+      "hit3": true
+    },
+    {
+      "q": "The compressor takes ages to pump up but the motor current looks fine",
+      "expect": [
+        "M-4.3"
+      ],
+      "top3": [
+        "M-2.2",
+        "M-4.3",
+        "M-4.4"
+      ],
+      "top_score": 8.745,
+      "hit1": false,
+      "hit3": true
+    },
+    {
+      "q": "The low pressure signal came on. Is that urgent?",
+      "expect": [
+        "M-4.4"
+      ],
+      "top3": [
+        "M-4.4",
+        "M-5.4",
+        "M-2.3"
+      ],
+      "top_score": 9.052,
+      "hit1": true,
+      "hit3": true
+    },
+    {
+      "q": "H1 switches at the wrong pressure",
+      "expect": [
+        "M-4.5"
+      ],
+      "top3": [
+        "M-4.5",
+        "M-2.3",
+        "M-2.4"
+      ],
+      "top_score": 8.551,
+      "hit1": true,
+      "hit3": true
+    },
+    {
+      "q": "Oil is running hot during normal cycles",
+      "expect": [
+        "M-5.1"
+      ],
+      "top3": [
+        "M-5.1",
+        "M-1.3",
+        "M-2.2"
+      ],
+      "top_score": 8.914,
+      "hit1": true,
+      "hit3": true
+    },
+    {
+      "q": "Oil level warning on the compressor",
+      "expect": [
+        "M-5.2"
+      ],
+      "top3": [
+        "M-5.2",
+        "M-2.4",
+        "M-5.1"
+      ],
+      "top_score": 6.078,
+      "hit1": true,
+      "hit3": true
+    },
+    {
+      "q": "Motor is drawing too much current after start-up",
+      "expect": [
+        "M-5.3"
+      ],
+      "top3": [
+        "M-1.2",
+        "M-5.3",
+        "M-3.2"
+      ],
+      "top_score": 9.144,
+      "hit1": false,
+      "hit3": true
+    },
+    {
+      "q": "Current stays low although the unit should be loading",
+      "expect": [
+        "M-5.4"
+      ],
+      "top3": [
+        "M-5.4",
+        "M-4.3",
+        "M-2.2"
+      ],
+      "top_score": 9.039,
+      "hit1": true,
+      "hit3": true
+    },
+    {
+      "q": "What is the difference between watch and act?",
+      "expect": [
+        "M-3.1"
+      ],
+      "top3": [
+        "M-3.3",
+        "M-7.2",
+        "M-3.1"
+      ],
+      "top_score": 6.019,
+      "hit1": false,
+      "hit3": true
+    },
+    {
+      "q": "Which sensor should I look at first in an alert?",
+      "expect": [
+        "M-3.2"
+      ],
+      "top3": [
+        "M-3.2",
+        "M-3.1",
+        "M-4.3"
+      ],
+      "top_score": 7.536,
+      "hit1": true,
+      "hit3": true
+    },
+    {
+      "q": "I got one watch alert. Should I pull the train from service?",
+      "expect": [
+        "M-3.3"
+      ],
+      "top3": [
+        "M-3.1",
+        "M-3.3",
+        "M-6.2"
+      ],
+      "top_score": 8.455,
+      "hit1": false,
+      "hit3": true
+    },
+    {
+      "q": "How do I lock out the unit before maintenance?",
+      "expect": [
+        "M-6.3"
+      ],
+      "top3": [
+        "M-3.3",
+        "M-6.3",
+        "M-7.1"
+      ],
+      "top_score": 7.114,
+      "hit1": false,
+      "hit3": true
+    },
+    {
+      "q": "When should I call a senior engineer?",
+      "expect": [
+        "M-6.4"
+      ],
+      "top3": [
+        "M-6.4"
+      ],
+      "top_score": 7.39,
+      "hit1": true,
+      "hit3": true
+    },
+    {
+      "q": "How often does the desiccant need replacing?",
+      "expect": [
+        "M-6.2"
+      ],
+      "top3": [
+        "M-6.2",
+        "M-1.1",
+        "M-5.2"
+      ],
+      "top_score": 3.81,
+      "hit1": true,
+      "hit3": true
+    },
+    {
+      "q": "What priority does a work order get after a low pressure event?",
+      "expect": [
+        "M-7.2"
+      ],
+      "top3": [
+        "M-7.2",
+        "M-7.1",
+        "M-4.4"
+      ],
+      "top_score": 19.106,
+      "hit1": true,
+      "hit3": true
+    },
+    {
+      "q": "What information goes into a work order?",
+      "expect": [
+        "M-7.1"
+      ],
+      "top3": [
+        "M-7.1",
+        "M-7.2",
+        "M-5.2"
+      ],
+      "top_score": 7.472,
+      "hit1": true,
+      "hit3": true
+    },
+    {
+      "q": "At what pressure does the compressor start loading?",
+      "expect": [
+        "M-1.2"
+      ],
+      "top3": [
+        "M-2.3",
+        "M-1.2",
+        "M-2.1"
+      ],
+      "top_score": 5.842,
+      "hit1": false,
+      "hit3": true
+    },
+    {
+      "q": "What does Caudal_impulses measure?",
+      "expect": [
+        "M-2.4"
+      ],
+      "top3": [
+        "M-2.4",
+        "M-4.1"
+      ],
+      "top_score": 7.325,
+      "hit1": true,
+      "hit3": true
+    }
+  ],
+  "out_of_scope": [
+    {
+      "q": "How do I replace the pantograph carbon strip?",
+      "top": "M-4.5",
+      "top_score": 2.279
+    },
+    {
+      "q": "What is the maximum speed of the train?",
+      "top": "M-6.1",
+      "top_score": 2.199
+    },
+    {
+      "q": "How do I reset the passenger information display?",
+      "top": "M-5.3",
+      "top_score": 3.706
+    },
+    {
+      "q": "Which coolant does the traction inverter use?",
+      "top": null,
+      "top_score": 0.0
+    },
+    {
+      "q": "How often should the wheels be reprofiled?",
+      "top": "M-5.2",
+      "top_score": 2.159
+    },
+    {
+      "q": "What is the warranty period of the WD-200?",
+      "top": "M-1.1",
+      "top_score": 8.565
+    },
+    {
+      "q": "How do I book annual leave?",
+      "top": null,
+      "top_score": 0.0
+    },
+    {
+      "q": "The air conditioning in the cab is not cooling",
+      "top": "M-6.3",
+      "top_score": 3.521
+    },
+    {
+      "q": "How do I clean graffiti off the windows?",
+      "top": "M-6.3",
+      "top_score": 3.521
+    },
+    {
+      "q": "What is the battery voltage of the train?",
+      "top": "M-5.3",
+      "top_score": 3.183
+    }
+  ]
+}

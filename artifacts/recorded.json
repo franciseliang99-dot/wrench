@@ -1,0 +1,86 @@
+{
+  "machine": "AMD Token Factory (AMD GPUs)",
+  "model": "Gemma-4-31B-IT",
+  "answers": {
+    "reservoir pressure keeps falling when the train is parked overnight, what should i check?": {
+      "output": "```json\n{\n  \"claims\": [\n    {\n      \"text\": \"Run the leak test in M-6.1 while the train is parked and all consumers are idle.\",\n      \"citations\": [\n        {\n          \"source\": \"manual\",\n          \"id\": \"M-4.1\",\n          \"quote\": \"Action: run the leak test in M-6.1 with the train parked and all consumers idle.\"\n        }\n      ]\n    },\n    {\n      \"text\": \"Check for likely causes such as a worn seal on a consumer (e.g., brake cylinder or door), a cracked hose, or a loose fitting.\",\n      \"citations\": [\n        {\n          \"source\": \"manual\",\n          \"id\": \"M-4.1\",\n          \"quote\": \"Likely causes: a loose fitting, a cracked hose or a worn seal on a consumer such as a door or brake cylinder.\"\n        }\n      ]\n    }\n  ]\n}\n```",
+      "recorded_at": "2026-10-18T01:10:24+00:00"
+    },
+    "how do i run a leak test?": {
+      "output": "```json\n{\n  \"claims\": [\n    {\n      \"text\": \"To perform a leak test, park the train with all consumers idle, allow the compressor to reach the upper setpoint and unload, record the reservoir pressure, and then record it again after 10 minutes without the compressor loading.\",\n      \"citations\": [\n        {\n          \"source\": \"manual\",\n          \"id\": \"M-6.1\",\n          \"quote\": \"Park the train with all consumers idle. Let the compressor reach the upper setpoint and unload. Record reservoir pressure, then\\nrecord it again after 10 minutes without the compressor loading.\"\n        }\n      ]\n    },\n    {\n      \"text\": \"A pressure drop exceeding 0.5 bar in 10 minutes indicates a leak, which can be located by listening along pipe runs or using leak-detection spray on hoses, fittings, and cylinder seals.\",\n      \"citations\": [\n        {\n          \"source\": \"manual\",\n          \"id\": \"M-6.1\",\n          \"quote\": \"A drop of more than 0.5 bar in 10 minutes means a leak. Find it\\nby listening along the pipe runs or with leak-detection spray on fittings, hoses and cylinder seals.\"\n        }\n      ]\n    },\n    {\n      \"text\": \"Once a leak is found, tighten or replace the part and repeat the test until the pressure drop is within limits.\",\n      \"citations\": [\n        {\n          \"source\": \"manual\",\n          \"id\": \"M-6.1\",\n          \"quote\": \"Tighten or replace the part,\\nthen repeat the test until the drop is within limits.\"\n        }\n      ]\n    }\n  ]\n}\n```",
+      "recorded_at": "2026-10-18T01:10:50+00:00"
+    },
+    "dv_pressure does not go back to zero while the compressor is loading": {
+      "output": "```json\n{\"claims\": [{\"text\": \"Perform a dryer tower check by observing DV_pressure through two tower changes; if a tower does not hold pressure, isolate it and replace the purge valve seal using kit `WD-KIT-07`.\", \"citations\": [{\"source\": \"manual\", \"id\": \"M-6.2\", \"quote\": \"With the unit loading, watch DV_pressure through two tower changes. It should return to near zero within a few seconds of each change. If one tower does not hold pressure, isolate it, replace the purge valve seal (kit `WD-KIT-07`) and repeat the check.\"}]}]}\n```",
+      "recorded_at": "2026-10-18T01:11:04+00:00"
+    },
+    "the compressor takes ages to pump up but the motor current looks fine": {
+      "output": "```json\n{\"claims\": [{\"text\": \"Inspect and replace the intake filter first; if the pressure build-up remains slow, perform the leak test described in M-6.1.\", \"citations\": [{\"source\": \"manual\", \"id\": \"M-4.3\", \"quote\": \"inspect and replace the intake filter first; if build-up stays slow, run the leak test in M-6.1.\"}]}]}\n```",
+      "recorded_at": "2026-10-18T01:11:15+00:00"
+    },
+    "the low pressure signal came on. is that urgent?": {
+      "output": "```json\n{\"claims\": [{\"text\": \"A low pressure signal (LPS) should be treated as urgent because brakes may not release normally.\", \"citations\": [{\"source\": \"manual\", \"id\": \"M-4.4\", \"quote\": \"Treat it as urgent: brakes may not release normally.\"}]}]}\n```",
+      "recorded_at": "2026-10-18T01:11:24+00:00"
+    },
+    "h1 switches at the wrong pressure": {
+      "output": "```json\n{\"claims\": [{\"text\": \"If H1 changes state at pressures that do not match the setpoints, it may be caused by a faulty pressure switch or a wiring fault; the recommended action is to compare TP2 and TP3 with a calibrated gauge and replace the switch if readings differ by more than 0.3 bar.\", \"citations\": [{\"source\": \"manual\", \"id\": \"M-4.5\", \"quote\": \"Pressure switch or valve signals inconsistent\\nSymptoms: H1, MPG or COMP change state at pressures that do not match the setpoints in M-1.2, or Pressure_switch reports\\ndischarges with no matching pressure change. Likely causes: a faulty pressure switch or a wiring fault. Action: compare TP2 and\\nTP3 with a calibrated gauge; replace the switch if the readings differ by more than 0.3 bar.\"}]}]}\n```",
+      "recorded_at": "2026-10-18T01:11:40+00:00"
+    },
+    "oil is running hot during normal cycles": {
+      "output": "```json\n{\n  \"claims\": [\n    {\n      \"text\": \"Check the oil level first, then clean the cooler fins.\",\n      \"citations\": [\n        {\n          \"source\": \"manual\",\n          \"id\": \"M-5.1\",\n          \"quote\": \"check the oil level first, then clean the cooler fins.\"\n        }\n      ]\n    },\n    {\n      \"text\": \"If the duty cycle is high, treat the leak rather than the temperature.\",\n      \"citations\": [\n        {\n          \"source\": \"manual\",\n          \"id\": \"M-5.1\",\n          \"quote\": \"If the duty cycle is high, treat the leak, not the temperature.\"\n        }\n      ]\n    }\n  ]\n}\n```",
+      "recorded_at": "2026-10-18T01:11:52+00:00"
+    },
+    "oil level warning on the compressor": {
+      "output": "```json\n{\n  \"claims\": [\n    {\n      \"text\": \"The Oil_level signal is set when the oil level falls below the expected mark.\",\n      \"citations\": [\n        {\n          \"source\": \"manual\",\n          \"id\": \"M-2.4\",\n          \"quote\": \"Oil_level is set when the oil level falls below the expected mark.\"\n        }\n      ]\n    },\n    {\n      \"text\": \"When the oil level is low, the unit should be stopped and cooled, then topped up with the oil grade specified on the unit's plate, and the housing, hoses, and drain should be checked for oil.\",\n      \"citations\": [\n        {\n          \"source\": \"manual\",\n          \"id\": \"M-5.2\",\n          \"quote\": \"with the unit stopped and cooled (M-1.3), top up with the oil grade on the unit's plate and look for oil on the housing, hoses and drain.\"\n        }\n      ]\n    },\n    {\n      \"text\": \"If the oil level drops again within a week, it indicates an oil leak and a work order should be opened.\",\n      \"citations\": [\n        {\n          \"source\": \"manual\",\n          \"id\": \"M-5.2\",\n          \"quote\": \"An oil level that drops again within a week means an oil leak; open a work order.\"\n        }\n      ]\n    },\n    {\n      \"text\": \"A low oil level can be a likely cause of high oil temperature.\",\n      \"citations\": [\n        {\n          \"source\": \"manual\",\n          \"id\": \"M-5.1\",\n          \"quote\": \"Likely causes: low oil level (M-5.2), a blocked oil cooler, or a unit that loads far more often than usual because of a leak (M-4.1).\"\n        }\n      ]\n    }\n  ]\n}\n```",
+      "recorded_at": "2026-10-18T01:12:18+00:00"
+    },
+    "motor is drawing too much current after start-up": {
+      "output": "```json\n{\n  \"claims\": [\n    {\n      \"text\": \"If the motor current is above approximately 9 A outside of the start-up peak, the unit should be stopped to inspect the drive, as this may be caused by low supply voltage, a seized screw element, or worn bearings.\",\n      \"citations\": [\n        {\n          \"source\": \"manual\",\n          \"id\": \"M-5.3\",\n          \"quote\": \"Symptoms: Motor_current above about 9 A outside the start-up peak, or start-up peaks that last longer than usual. Likely causes: worn bearings, a seized screw element or low supply voltage. Action: stop the unit and inspect the drive.\"\n        }\n      ]\n    },\n    {\n      \"text\": \"A motor protection trip should not be reset more than once without performing an inspection.\",\n      \"citations\": [\n        {\n          \"source\": \"manual\",\n          \"id\": \"M-5.3\",\n          \"quote\": \"Do not reset a motor protection trip more than once without an inspection.\"\n        }\n      ]\n    }\n  ]\n}\n```",
+      "recorded_at": "2026-10-18T01:12:39+00:00"
+    },
+    "current stays low although the unit should be loading": {
+      "output": "```json\n{\"claims\": [{\"text\": \"Check the intake valve signal and the coupling.\", \"citations\": [{\"source\": \"manual\", \"id\": \"M-5.4\", \"quote\": \"Action: check the intake valve signal and the coupling (see M-4.3).\"}]}]}\n```",
+      "recorded_at": "2026-10-18T01:12:45+00:00"
+    },
+    "what is the difference between watch and act?": {
+      "output": "```json\n{\n  \"claims\": [\n    {\n      \"text\": \"A watch alert indicates that something drifted from the baseline for at least one interval, requiring a check of the drivers and a re-evaluation at the next stop.\",\n      \"citations\": [\n        {\n          \"source\": \"manual\",\n          \"id\": \"M-3.1\",\n          \"quote\": \"watch: something drifted away from the baseline for at least one interval; look at the drivers and check again at the next stop.\"\n        }\n      ]\n    },\n    {\n      \"text\": \"An act alert occurs when a deviation lasts for an hour or more, necessitating an inspection plan before the next service day.\",\n      \"citations\": [\n        {\n          \"source\": \"manual\",\n          \"id\": \"M-3.1\",\n          \"quote\": \"act: the deviation has lasted for an hour or more; plan an inspection before the next service day.\"\n        }\n      ]\n    }\n  ]\n}\n```",
+      "recorded_at": "2026-10-18T01:12:58+00:00"
+    },
+    "which sensor should i look at first in an alert?": {
+      "output": "```json\n{\"claims\": [{\"text\": \"Start the diagnosis from the first driver.\", \"citations\": [{\"source\": \"manual\", \"id\": \"M-3.2\", \"quote\": \"Start the diagnosis from the first driver\"}]}]}\n```",
+      "recorded_at": "2026-10-18T01:13:05+00:00"
+    },
+    "i got one watch alert. should i pull the train from service?": {
+      "output": "```json\n{\"claims\": [{\"text\": \"A single watch alert does not justify taking a train out of service.\", \"citations\": [{\"source\": \"manual\", \"id\": \"M-3.3\", \"quote\": \"A watch alone does not justify taking a train out of service.\"}]}]}\n```",
+      "recorded_at": "2026-10-18T01:13:15+00:00"
+    },
+    "how do i lock out the unit before maintenance?": {
+      "output": "```json\n{\"claims\": [{\"text\": \"To isolate the unit before work, switch off and lock the compressor supply breaker, hang a personal lock and tag, open the reservoir drain until the gauge reads zero, and wait for hot parts to cool.\", \"citations\": [{\"source\": \"manual\", \"id\": \"M-6.3\", \"quote\": \"Switch off and lock the compressor supply breaker, and hang a personal lock and tag. Open the reservoir drain until the gauge\\nreads zero. Wait for hot parts to cool.\"}]}]}\n```",
+      "recorded_at": "2026-10-18T01:13:22+00:00"
+    },
+    "when should i call a senior engineer?": {
+      "output": "```json\n{\n  \"claims\": [\n    {\n      \"text\": \"Escalate to a senior engineer if the LPS was raised, the leak test fails twice after repair, the motor protection tripped twice, or the symptom does not match any section of the manual.\",\n      \"citations\": [\n        {\n          \"source\": \"manual\",\n          \"id\": \"M-6.4\",\n          \"quote\": \"Escalate to a senior engineer when: LPS was raised (M-4.4); the leak test fails twice after repair; the motor protection tripped twice; or the symptom does not match any section of this manual.\"\n        }\n      ]\n    }\n  ]\n}\n```",
+      "recorded_at": "2026-10-18T01:13:30+00:00"
+    },
+    "how often does the desiccant need replacing?": {
+      "output": "```json\n{\"claims\": [{\"text\": \"Desiccant should be replaced every 4 000 running hours or when the outlet air is wet.\", \"citations\": [{\"source\": \"manual\", \"id\": \"M-6.2\", \"quote\": \"Desiccant should be replaced every 4 000 running hours or when the outlet air is wet.\"}]}]}\n```",
+      "recorded_at": "2026-10-18T01:14:12+00:00"
+    },
+    "what priority does a work order get after a low pressure event?": {
+      "output": "```json\n{\"claims\": [{\"text\": \"A low pressure signal (LPS) event results in a priority 1 order, requiring inspection before the next run.\", \"citations\": [{\"source\": \"manual\", \"id\": \"M-7.2\", \"quote\": \"An LPS event (M-4.4) becomes priority 1: inspect before the next run.\"}]}]}\n```",
+      "recorded_at": "2026-10-18T01:14:28+00:00"
+    },
+    "what information goes into a work order?": {
+      "output": "```json\n{\n  \"claims\": [\n    {\n      \"text\": \"A work order includes the unit, alert time, alert level and drivers, the suspected fault with its manual section, the steps to perform, the parts to bring, and the safety steps.\",\n      \"citations\": [\n        {\n          \"source\": \"manual\",\n          \"id\": \"M-7.1\",\n          \"quote\": \"Every work order names the unit, the alert time, the alert level and drivers, the suspected fault with its manual section, the steps to perform, the parts to bring and the safety steps (M-6.3).\"\n        }\n      ]\n    }\n  ]\n}\n```",
+      "recorded_at": "2026-10-18T01:15:16+00:00"
+    },
+    "at what pressure does the compressor start loading?": {
+      "output": "```json\n{\"claims\": [{\"text\": \"A healthy unit loads when reservoir pressure falls to about 8.2 bar.\", \"citations\": [{\"source\": \"manual\", \"id\": \"M-1.2\", \"quote\": \"A healthy unit loads when reservoir pressure falls to about 8.2 bar\"}]}]}\n```",
+      "recorded_at": "2026-10-18T01:15:24+00:00"
+    },
+    "what does caudal_impulses measure?": {
+      "output": "```json\n{\"claims\": [{\"text\": \"Caudal_impulses counts air-flow pulses into the reservoirs.\", \"citations\": [{\"source\": \"manual\", \"id\": \"M-2.4\", \"quote\": \"Caudal_impulses counts air-flow pulses into the reservoirs\"}]}]}\n```",
+      "recorded_at": "2026-10-18T01:15:32+00:00"
+    }
+  }
+}

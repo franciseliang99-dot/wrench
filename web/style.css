@@ -1,0 +1,34 @@
+:root {
+  --bg: #f7f7f5; --fg: #1d1d1b; --muted: #5d5d58; --card: #ffffff; --line: #d9d9d4;
+  --ok: #8fbf8f; --watch: #e0b84a; --act: #d0533f; --none: #c9c9c4; --accent: #2f5d8a; --warn-bg: #fff3cd;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #151514; --fg: #ececea; --muted: #a3a39e; --card: #20201e; --line: #3a3a37;
+    --ok: #5f8f5f; --watch: #b8952f; --act: #c4503e; --none: #4a4a46; --accent: #7aa7d6; --warn-bg: #4a3d12;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #151514; --fg: #ececea; --muted: #a3a39e; --card: #20201e; --line: #3a3a37;
+  --ok: #5f8f5f; --watch: #b8952f; --act: #c4503e; --none: #4a4a46; --accent: #7aa7d6; --warn-bg: #4a3d12;
+}
+* { box-sizing: border-box; }
+body { margin: 0; background: var(--bg); color: var(--fg); font: 15px/1.5 system-ui, sans-serif; }
+header, main { max-width: 960px; margin: 0 auto; padding: 0 16px; }
+h1 { margin: 24px 0 4px; }
+.sub, .hint, .meta { color: var(--muted); font-size: 13px; }
+.banner { background: var(--warn-bg); padding: 8px 12px; border-radius: 6px; font-weight: 600; }
+section { margin: 28px 0; }
+canvas { width: 100%; height: 220px; display: block; background: var(--card); border: 1px solid var(--line); border-radius: 6px; cursor: crosshair; }
+.card { background: var(--card); border: 1px solid var(--line); border-radius: 6px; padding: 12px 14px; margin-top: 12px; }
+pre { white-space: pre-wrap; word-wrap: break-word; font: inherit; margin: 8px 0; }
+textarea, input { width: 100%; font: inherit; padding: 8px; border: 1px solid var(--line); border-radius: 6px; background: var(--card); color: var(--fg); }
+label input { width: auto; margin-left: 6px; }
+button { margin-top: 8px; font: inherit; padding: 6px 14px; border: 0; border-radius: 6px; background: var(--accent); color: #fff; cursor: pointer; }
+button:disabled { opacity: .5; cursor: default; }
+.k { padding: 0 6px; border-radius: 3px; }
+.k.ok { background: var(--ok); } .k.watch { background: var(--watch); } .k.act { background: var(--act); color: #fff; } .k.none { background: var(--none); }
+ol, ul { padding-left: 20px; }
+blockquote { margin: 2px 0 8px; color: var(--muted); }
+table { border-collapse: collapse; width: 100%; font-size: 14px; }
+td, th { border-bottom: 1px solid var(--line); padding: 4px 6px; text-align: left; }

@@ -1,0 +1,12 @@
+{
+  "score_watch": 0.41767079681158126,
+  "score_act": 2.182336938858033,
+  "z_watch": 7.899296696288976,
+  "z_act": 10.121518918511201,
+  "persist": 6,
+  "chosen_on": "validation segment; lowest thresholds within each level's episode budget",
+  "budget_per_week": {
+    "act": 1.0,
+    "watch": 7.0
+  }
+}

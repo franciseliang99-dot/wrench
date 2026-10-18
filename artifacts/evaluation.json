@@ -1,0 +1,76 @@
+{
+  "mode": "final",
+  "lead_times": [
+    {
+      "failure_id": 1,
+      "start": "2020-04-18 00:00:00",
+      "first_act": "2020-04-18 01:10:00",
+      "lead_hours": 0.0,
+      "result": "during",
+      "segment": "validation"
+    },
+    {
+      "failure_id": 2,
+      "start": "2020-05-29 23:30:00",
+      "first_act": "2020-05-30 00:10:00",
+      "lead_hours": 0.0,
+      "result": "during",
+      "segment": "evaluation"
+    },
+    {
+      "failure_id": 3,
+      "start": "2020-06-05 10:00:00",
+      "first_act": "2020-06-03 11:00:00",
+      "lead_hours": 47.0,
+      "result": "early",
+      "segment": "evaluation"
+    },
+    {
+      "failure_id": 4,
+      "start": "2020-07-15 14:30:00",
+      "first_act": "2020-07-14 03:20:00",
+      "lead_hours": 35.2,
+      "result": "early",
+      "segment": "evaluation"
+    }
+  ],
+  "false_alarms": {
+    "validation": {
+      "episodes": 3,
+      "normal_weeks": 4.21,
+      "per_week": 0.71,
+      "episode_starts": [
+        "2020-04-12 12:40:00",
+        "2020-04-20 06:10:00",
+        "2020-05-13 14:40:00"
+      ]
+    },
+    "evaluation": {
+      "episodes": 4,
+      "normal_weeks": 11.22,
+      "per_week": 0.36,
+      "episode_starts": [
+        "2020-05-19 23:10:00",
+        "2020-06-22 16:40:00",
+        "2020-07-08 18:50:00",
+        "2020-07-22 08:10:00"
+      ]
+    }
+  },
+  "definitions": {
+    "lookback_hours": 72.0,
+    "after_failure_hours": 24.0,
+    "step": "10min"
+  },
+  "training": {
+    "device": "cpu",
+    "device_name": "arm",
+    "epochs": 6,
+    "train_windows": 69992,
+    "final_loss": 0.03642,
+    "train_seconds": 69.1,
+    "scored_windows": 23784,
+    "score_seconds": 1.6,
+    "torch": "2.14.1"
+  }
+}

@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Wrench</title>
+<link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+<header>
+  <h1>Wrench</h1>
+  <p class="sub">Compressor alerts with answers that quote the manual. Sensor data: MetroPT-3 (UCI, CC BY 4.0). Manual and logs are fictional.</p>
+  <p id="banner" class="banner" hidden></p>
+</header>
+
+<main>
+  <section>
+    <h2>Unit timeline</h2>
+    <p class="hint">Anomaly score of the autoencoder, 10-minute steps. Colour band: <span class="k ok">ok</span> <span class="k watch">watch</span> <span class="k act">act</span> <span class="k none">no data</span>. Red marks are the four recorded failures. Click to pick a time.</p>
+    <canvas id="chart" height="220"></canvas>
+    <div id="point" class="card" hidden>
+      <div id="pointHead"></div>
+      <ul id="drivers"></ul>
+      <button id="draftBtn" type="button">Draft work order</button>
+    </div>
+  </section>
+
+  <section>
+    <h2>Ask the manual</h2>
+    <form id="askForm">
+      <textarea id="question" maxlength="500" rows="3" placeholder="e.g. Reservoir pressure keeps falling when the train is parked overnight"></textarea>
+      <button type="submit">Ask</button>
+    </form>
+    <div id="answer" class="card" hidden>
+      <p id="servedBy" class="meta"></p>
+      <pre id="answerText"></pre>
+      <ol id="citations"></ol>
+    </div>
+  </section>
+
+  <section>
+    <h2>Work order</h2>
+    <div id="order" class="card" hidden>
+      <p id="orderMeta" class="meta"></p>
+      <pre id="orderText"></pre>
+      <label>Demo passcode <input id="passcode" type="password" autocomplete="off"></label>
+      <button id="approveBtn" type="button">Approve</button>
+      <p class="hint">Approving only changes the status here. Nothing is sent anywhere. Demo environment: state resets on restart.</p>
+    </div>
+    <p id="orderEmpty" class="hint">Pick a watch or act step on the timeline, then draft a work order.</p>
+  </section>
+
+  <section>
+    <h2>How well it works</h2>
+    <div id="evaluation" class="card"></div>
+  </section>
+</main>
+<script src="/static/app.js"></script>
+</body>
+</html>

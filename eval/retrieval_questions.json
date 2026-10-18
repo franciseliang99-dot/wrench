@@ -1,0 +1,37 @@
+{
+  "note": "Written by the same authors as the manual, so hit rates are optimistic. 'expect' lists every manual section that fully answers the question. 'out_of_scope' questions have no answer in the manual and are used only to set the refusal threshold.",
+  "in_scope": [
+    {"q": "Reservoir pressure keeps falling when the train is parked overnight, what should I check?", "expect": ["M-4.1", "M-6.1"]},
+    {"q": "How do I run a leak test?", "expect": ["M-6.1"]},
+    {"q": "DV_pressure does not go back to zero while the compressor is loading", "expect": ["M-4.2", "M-6.2"]},
+    {"q": "The compressor takes ages to pump up but the motor current looks fine", "expect": ["M-4.3"]},
+    {"q": "The low pressure signal came on. Is that urgent?", "expect": ["M-4.4"]},
+    {"q": "H1 switches at the wrong pressure", "expect": ["M-4.5"]},
+    {"q": "Oil is running hot during normal cycles", "expect": ["M-5.1"]},
+    {"q": "Oil level warning on the compressor", "expect": ["M-5.2"]},
+    {"q": "Motor is drawing too much current after start-up", "expect": ["M-5.3"]},
+    {"q": "Current stays low although the unit should be loading", "expect": ["M-5.4"]},
+    {"q": "What is the difference between watch and act?", "expect": ["M-3.1"]},
+    {"q": "Which sensor should I look at first in an alert?", "expect": ["M-3.2"]},
+    {"q": "I got one watch alert. Should I pull the train from service?", "expect": ["M-3.3"]},
+    {"q": "How do I lock out the unit before maintenance?", "expect": ["M-6.3"]},
+    {"q": "When should I call a senior engineer?", "expect": ["M-6.4"]},
+    {"q": "How often does the desiccant need replacing?", "expect": ["M-6.2"]},
+    {"q": "What priority does a work order get after a low pressure event?", "expect": ["M-7.2"]},
+    {"q": "What information goes into a work order?", "expect": ["M-7.1"]},
+    {"q": "At what pressure does the compressor start loading?", "expect": ["M-1.2"]},
+    {"q": "What does Caudal_impulses measure?", "expect": ["M-2.4"]}
+  ],
+  "out_of_scope": [
+    "How do I replace the pantograph carbon strip?",
+    "What is the maximum speed of the train?",
+    "How do I reset the passenger information display?",
+    "Which coolant does the traction inverter use?",
+    "How often should the wheels be reprofiled?",
+    "What is the warranty period of the WD-200?",
+    "How do I book annual leave?",
+    "The air conditioning in the cab is not cooling",
+    "How do I clean graffiti off the windows?",
+    "What is the battery voltage of the train?"
+  ]
+}

@@ -1,0 +1,21 @@
+[project]
+name = "wrench"
+version = "0.1.0"
+description = "Maintenance assistant for rotating equipment: anomaly alerts from sensor data, cited answers from the manual, draft work orders."
+requires-python = ">=3.11"
+license = {text = "MIT"}
+# Minimum versions are the ones this build was tested with (2026-10-13).
+# The base set is what the web service needs (it fits a 512 MB host). The data pipeline (scripts/) needs [pipeline].
+dependencies = ["fastapi>=0.142", "uvicorn>=0.54", "httpx>=0.28"]
+
+[project.optional-dependencies]
+pipeline = ["numpy>=2.0", "pandas>=2.2", "pyarrow>=17", "torch>=2.4"]
+test = ["pytest>=9.1"]
+
+[tool.setuptools.packages.find]
+include = ["wrench*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+# no .pytest_cache in the source tree
+addopts = "-p no:cacheprovider"
