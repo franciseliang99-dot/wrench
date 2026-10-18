@@ -109,12 +109,34 @@ def stub_generate(messages: list[dict]) -> str:
     return json.dumps({"claims": claims[:2]})
 
 
-def ask(question: str, index: BM25, generate: Generate, tau: float, context: str = "", k: int = 3) -> dict:
-    manual = index.search(question, k=k, source="manual")
+REF = re.compile(r"\bM-6\.\d+\b")  # procedure sections (M-6): the steps a fault section tells you to follow
+
+
+def follow_refs(docs: list[Doc], index: BM25, limit: int = 3) -> list[Doc]:
+    """Procedure sections that the retrieved sections point to ("follow the tower check in M-6.2"), one hop, in order."""
+    have = {d.id for d in docs}
+    by_id = {d.id: d for d in index.docs if d.source == "manual"}
+    out = []
+    for d in docs:
+        for ref in REF.findall(d.text):
+            if ref not in have and ref in by_id and len(out) < limit:
+                have.add(ref)
+                out.append(by_id[ref])
+    return out
+
+
+def ask(question: str, index: BM25, generate: Generate, tau: float, context: str = "", k: int = 3,
+        search: str | None = None, refs: bool = False) -> dict:
+    """search: retrieval query when it should differ from the question; refs: also pass the sections they cite."""
+    q = search or question
+    manual = index.search(q, k=k, source="manual")
     top = manual[0][1] if manual else 0.0
     if top < tau:
         return {"answer": REFUSAL, "citations": [], "refused": True, "top_score": round(top, 3)}
-    docs = [d for d, _ in manual] + [d for d, _ in index.search(question, k=2, source="log")]
+    docs = [d for d, _ in manual]
+    if refs:
+        docs += follow_refs(docs, index)
+    docs += [d for d, _ in index.search(q, k=2, source="log")]
     claims = verify(parse_claims(generate(build_messages(question, docs, context))), docs)
     if not claims:
         return {"answer": NO_VERIFIED, "citations": [], "refused": True, "top_score": round(top, 3)}

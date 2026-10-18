@@ -90,3 +90,15 @@ def test_model_that_invents_quotes_gets_refused():
 def test_shipped_tau_refuses_an_out_of_scope_question():
     r = qa.ask("How do I book annual leave?", INDEX, qa.stub_generate, tau=qa.load_tau())
     assert r["refused"]
+
+
+def test_refs_add_the_procedure_a_fault_section_points_to():
+    idx = BM25(load_corpus())
+    seen = []
+    qa.ask("draft steps", idx, lambda m: seen.append(m[-1]["content"]) or '{"claims": []}', 0.0,
+           search="Symptoms: DV_pressure high, TP2 high, Towers low. Likely fault, checks, test and repair.", refs=True)
+    assert "[manual M-4.2]" in seen[0] and "[manual M-6.2]" in seen[0]
+    seen.clear()
+    qa.ask("draft steps", idx, lambda m: seen.append(m[-1]["content"]) or '{"claims": []}', 0.0,
+           search="Symptoms: DV_pressure high, TP2 high, Towers low. Likely fault, checks, test and repair.")
+    assert "[manual M-6.2]" not in seen[0]

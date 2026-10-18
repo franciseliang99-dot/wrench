@@ -191,9 +191,12 @@ def create_app(*, live: Live | None, recorded: dict, passcode: str | None = None
         if p["level"] not in ("watch", "act"):
             raise HTTPException(409, f"no alert at this time (level {p['level']})")
         served: dict = {}
-        q = f"{p['level']} alert. Drivers: " + ", ".join(f"{d['sensor']} {d['direction']}" for d in p["drivers"]) \
-            + ". What should be inspected and done?"
-        r = qa.ask(q, index, lambda m: run_live(m, served), tau, context=context_line(p))  # live only: never replayed
+        symptoms = ", ".join(f"{d['sensor']} {d['direction']}" for d in p["drivers"])
+        q = (f"{p['level']} alert. Drivers: {symptoms}. Write the work-order steps: first the suspected fault with its "
+             "manual section, then each check, test and repair step in order, one claim per step.")
+        # retrieve on the symptoms (fault sections), then the procedures those sections point to
+        r = qa.ask(q, index, lambda m: run_live(m, served), tau, context=context_line(p),
+                   search=f"Symptoms: {symptoms}. Likely fault, checks, test and repair.", refs=True)  # live only
         prio, rule = priority(p)
         parts = sorted({parts_by_log[c["id"]] for c in r["citations"]
                         if c["source"] == "log" and parts_by_log.get(c["id"], "none") != "none"})
