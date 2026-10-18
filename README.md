@@ -1,5 +1,7 @@
 # Wrench
 
+**Live demo:** https://wrench-2yot.onrender.com (free host: the first request after it has been idle can take about a minute).
+
 Wrench is a maintenance assistant for a train's air compressor. It tells the technician three things:
 
 1. **Is this unit about to fail?** An alert level (ok / watch / act) for every 10 minutes of sensor data, with the sensors that drive it.
@@ -45,7 +47,7 @@ False `act` alerts per week of normal operation: 0.71 on validation (3 episodes 
 - **Only four failures, all air leaks, on one compressor.** Two of the four were caught only after they started. Four events are not enough for a reliable average, so the table lists each one.
 - **The evaluation segment was looked at once before tuning.** A first version was run on it. After that, all changes were based on the validation segment only, and the reported numbers come from a `--final` run. It is not a held-out set that was never seen.
 - **The manual and the maintenance records are fictional**, written for this project (`corpus/README.md`). The retrieval questions were written by the same author as the manual, so the retrieval numbers are optimistic.
-- **The alert model was trained and scored on CPU.** Only the language model runs on AMD GPUs. A live answer takes 15 to 35 seconds.
+- **The alert model was trained and scored on CPU.** Only the language model runs on AMD GPUs. A live answer took 4 to 35 seconds in our runs.
 - **Priority 1 never fires on this data.** The rule (an `LPS` driver means "inspect before the next run") is covered by tests, but no `act` step in this data has `LPS` among its drivers.
 - Work-order state lives in memory and resets when the server restarts.
 
